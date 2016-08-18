@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Advanced JS App</title>
+		
+</head>
+<body>
+	<h2>Car Details:</h2>
+	<div id="car_details"></div>	
+	<script>
+		function Car(make, model, year) {
+			this.make = make;
+			this.model = model;
+			this.year = year;
+			
+			this.showDetails = function(){
+				return ("Make: <strong>" + this.make + "</strong>, Model: <strong>" + 
+					this.model + "</strong>, Year: <strong>" + this.year + "</strong>");
+			};
+		}
+		var carOne = new Car("Suzuki", "Maruti", 2012);
+		var carTwo = new Car("Honda", "S4", 2015);
+		document.getElementById("car_details").innerHTML = carOne.showDetails() + "<br/>" + carTwo.showDetails();
+	</script>
+</body>
+</html>
